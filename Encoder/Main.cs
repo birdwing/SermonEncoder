@@ -241,7 +241,7 @@ namespace Encoder
                 Encoder.AddCommand(
                     new XCustomCommand()
                     {
-                        Command = $@"-vcodec libx264 -f mp4 -vb 256k -r 29.97 -profile:v main -level:v 4.0 -preset slow -acodec aac -strict -2 -ab 160k -ar 48000 -vf scale=710:-2"
+                        Command = $@"-vcodec libx264 -f mp4 -vb 1000k -r 29.97 -profile:v main -level:v 4.0 -preset slow -acodec aac -strict -2 -ab 96k -ar 48000 -vf scale=720:-2"
                     }
                 );
                 Encoder.AddCommand(VideoFile);

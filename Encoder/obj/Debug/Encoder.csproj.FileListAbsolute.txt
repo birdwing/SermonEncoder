@@ -22,3 +22,27 @@ C:\Users\0787060317\Documents\Visual Studio 2017\Projects\Encoder\Encoder\obj\De
 C:\Users\0787060317\Documents\Visual Studio 2017\Projects\Encoder\Encoder\bin\Debug\WinSCP.exe
 C:\Users\0787060317\Documents\Visual Studio 2017\Projects\Encoder\Encoder\bin\Debug\WinSCPnet.dll
 C:\Users\0787060317\Documents\Visual Studio 2017\Projects\Encoder\Encoder\obj\Debug\Encoder.csprojAssemblyReference.cache
+D:\SermonEncoder\Encoder\bin\Debug\WinSCP.exe
+D:\SermonEncoder\Encoder\bin\Debug\Encoder.exe.config
+D:\SermonEncoder\Encoder\bin\Debug\Encoder.exe.manifest
+D:\SermonEncoder\Encoder\bin\Debug\Encoder.application
+D:\SermonEncoder\Encoder\bin\Debug\Encoder.exe
+D:\SermonEncoder\Encoder\bin\Debug\Encoder.pdb
+D:\SermonEncoder\Encoder\bin\Debug\FireEncoder.dll
+D:\SermonEncoder\Encoder\bin\Debug\Newtonsoft.Json.dll
+D:\SermonEncoder\Encoder\bin\Debug\WindowsBase.dll
+D:\SermonEncoder\Encoder\bin\Debug\WinSCPnet.dll
+D:\SermonEncoder\Encoder\bin\Debug\FireEncoder.xml
+D:\SermonEncoder\Encoder\bin\Debug\Newtonsoft.Json.xml
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.csprojAssemblyReference.cache
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.AddSermon.resources
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.EncoderSettings.resources
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.FTPSettings.resources
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.Sermons.resources
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.Properties.Resources.resources
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.csproj.GenerateResource.cache
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.exe.manifest
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.application
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.csproj.CopyComplete
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.exe
+D:\SermonEncoder\Encoder\obj\Debug\Encoder.pdb

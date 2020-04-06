@@ -234,7 +234,7 @@
         {
             if (string.IsNullOrEmpty(this.FTPHostTxt.Text))
             {
-                FTPErrorProvider.SetError(this.FTPHostTxt, "Host is required.");
+                FTPErrorProvider.SetError(this.FTPHostTxt, "Field is required.");
             }
             else
             {
