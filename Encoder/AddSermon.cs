@@ -66,7 +66,7 @@ namespace Encoder
             fd.Title = "Select Import File";
             fd.InitialDirectory = "C:\\";
             fd.RestoreDirectory = true;
-            fd.Filter = "video files (*.mp4;*.mov;*.m4v;*.mpg)|*.mp4;*.mov;*.m4v;*.mpg";
+            fd.Filter = "video files (*.mp4;*.mov;*.m4v;*.mpg;*.mkv)|*.mp4;*.mov;*.m4v;*.mpg;*.mkv";
             DialogResult dr = fd.ShowDialog();
 
             if (dr == DialogResult.OK)
