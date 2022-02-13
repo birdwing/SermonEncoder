@@ -46,3 +46,28 @@ D:\SermonEncoder\Encoder\obj\Debug\Encoder.application
 D:\SermonEncoder\Encoder\obj\Debug\Encoder.csproj.CopyComplete
 D:\SermonEncoder\Encoder\obj\Debug\Encoder.exe
 D:\SermonEncoder\Encoder\obj\Debug\Encoder.pdb
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.csprojAssemblyReference.cache
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.AddSermon.resources
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.EncoderSettings.resources
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.FTPSettings.resources
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.Sermons.resources
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.Properties.Resources.resources
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.csproj.GenerateResource.cache
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.csproj.CoreCompileInputs.cache
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.exe
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.pdb
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\WinSCP.exe
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\Encoder.exe.config
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\Encoder.exe.manifest
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\Encoder.application
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\Encoder.exe
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\Encoder.pdb
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\FireEncoder.dll
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\Newtonsoft.Json.dll
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\WindowsBase.dll
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\WinSCPnet.dll
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\FireEncoder.xml
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\bin\Debug\Newtonsoft.Json.xml
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.exe.manifest
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.application
+E:\User Data\Documents\GWC\Sermon Archive\SermonEncoder\Encoder\obj\Debug\Encoder.csproj.CopyComplete
