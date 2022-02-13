@@ -6,5 +6,7 @@ namespace Encoder
     class SermonEncoder : MediaEncoder
     {
         public ListViewItem Sermon { get; set; }
+        public string FFmpegVideoCmd { get; set; }
+        public string FFmpegAudioCmd { get; set; }
     }
 }

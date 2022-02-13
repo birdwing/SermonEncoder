@@ -35,6 +35,8 @@ namespace Encoder
             {
                 Properties.Settings.Default.FFmpegPath = FFmpegPathTxt.Text;
                 Properties.Settings.Default.FFmpegDir = FFmpegDirTxt.Text;
+                Properties.Settings.Default.FFmpegAudioCmd = FFmpegAudioCmdtxt.Text;
+                Properties.Settings.Default.FFmpegVideoCmd = FFmpegVideoCmdtxt.Text;
                 Properties.Settings.Default.Save();
                 this.Close();
             }

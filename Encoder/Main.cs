@@ -227,6 +227,8 @@ namespace Encoder
                 };
                 Encoder.WorkingDirectory = Properties.Settings.Default.FFmpegDir;
                 Encoder.FFmpegPath = Properties.Settings.Default.FFmpegPath;
+                Encoder.FFmpegAudioCmd = Properties.Settings.Default.FFmpegAudioCmd;
+                Encoder.FFmpegVideoCmd = Properties.Settings.Default.FFmpegVideoCmd;
                 Encoder.ProgressChanged += ProgressChangedEvent;
                 Encoder.EncodeCompleted += EncodeCompletedEvent;
                 Encoder.Sermon = Sermon;
@@ -234,14 +236,16 @@ namespace Encoder
                 Encoder.AddCommand(
                     new XCustomCommand()
                     {
-                        Command = $@"-acodec libmp3lame -ab 96k -ar 48000 -joint_stereo 1 -metadata title=""{Sermon.Text}"" -metadata artist=""{Sermon.SubItems[1].Text}"" -metadata album=""Gateway Worship Center"" -metadata genre=""Christian Sermon"""
+                        Command = $@"{ Encoder.FFmpegAudioCmd } -metadata title=""{Sermon.Text}"" -metadata artist=""{Sermon.SubItems[1].Text}"" -metadata album=""Gateway Worship Center"" -metadata genre=""Christian Sermon"""
+                        //Command = $@"-acodec libmp3lame -ab 96k -ar 48000 -joint_stereo 1 -metadata title=""{Sermon.Text}"" -metadata artist=""{Sermon.SubItems[1].Text}"" -metadata album=""Gateway Worship Center"" -metadata genre=""Christian Sermon"""
                     }
                 );
                 Encoder.AddCommand(AudioFile);
                 Encoder.AddCommand(
                     new XCustomCommand()
                     {
-                        Command = $@"-vcodec libx264 -f mp4 -vb 1000k -r 29.97 -profile:v main -level:v 4.0 -preset slow -acodec aac -strict -2 -ab 96k -ar 48000 -vf scale=720:-2"
+                        Command = $@"{ Encoder.FFmpegVideoCmd}"
+                        //Command = $@"-vcodec libx264 -f mp4 -vb 1000k -r 29.97 -profile:v main -level:v 4.0 -preset slow -acodec aac -strict -2 -ab 96k -ar 48000 -vf scale=720:-2"
                     }
                 );
                 Encoder.AddCommand(VideoFile);

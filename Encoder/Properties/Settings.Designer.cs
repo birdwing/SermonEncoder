@@ -12,7 +12,7 @@ namespace Encoder.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -128,6 +128,31 @@ namespace Encoder.Properties {
             }
             set {
                 this["FTPProtocol"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-vcodec libx264 -f mp4 -vb 1000k -r 29.97 -profile:v main -level:v 4.0 -preset sl" +
+            "ow -acodec aac -strict -2 -ab 96k -ar 48000 -vf scale=720:-2")]
+        public string FFmpegVideoCmd {
+            get {
+                return ((string)(this["FFmpegVideoCmd"]));
+            }
+            set {
+                this["FFmpegVideoCmd"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-acodec libmp3lame -ab 96k -ar 48000 -joint_stereo 1")]
+        public string FFmpegAudioCmd {
+            get {
+                return ((string)(this["FFmpegAudioCmd"]));
+            }
+            set {
+                this["FFmpegAudioCmd"] = value;
             }
         }
     }

@@ -29,5 +29,11 @@
     <Setting Name="FTPProtocol" Type="System.String" Scope="User">
       <Value Profile="(Default)">FTP</Value>
     </Setting>
+    <Setting Name="FFmpegVideoCmd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-vcodec libx264 -f mp4 -vb 1000k -r 29.97 -profile:v main -level:v 4.0 -preset slow -acodec aac -strict -2 -ab 96k -ar 48000 -vf scale=720:-2</Value>
+    </Setting>
+    <Setting Name="FFmpegAudioCmd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-acodec libmp3lame -ab 96k -ar 48000 -joint_stereo 1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
