@@ -356,12 +356,12 @@ namespace Encoder
             } else
             {
                 string ext = this.AddSermonFileTxt.Text.Split('.').Last();
-                if (ext == "mp4" || ext == "mov" || ext == "m4v" || ext == "mpg")
+                if (ext == "mp4" || ext == "mov" || ext == "m4v" || ext == "mpg" || ext == "mkv")
                 {
                     SermonErrorProvider.SetError(this.AddSermonFileTxt, string.Empty);
                 } else
                 {
-                    SermonErrorProvider.SetError(this.AddSermonFileTxt, "File must be .mp4, .mov, .mpg or .m4v format.");
+                    SermonErrorProvider.SetError(this.AddSermonFileTxt, "File must be .mp4, .mov, .mpg, .mkv or .m4v format.");
                 }
             }
         }
