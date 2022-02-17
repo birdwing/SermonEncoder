@@ -4,7 +4,7 @@
   <description asmv2:iconFile="icon_z8l_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Encoder" version="1.0.0.0" publicKeyToken="DBE292E9D44A7771" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Encoder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="Encoder.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Encoder.exe" size="122848">
-      <assemblyIdentity name="Encoder" version="1.0.0.0" publicKeyToken="DBE292E9D44A7771" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Encoder.exe" size="121344">
+      <assemblyIdentity name="Encoder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pRbGlkPhVZq3aoaN60n6CagzUToh3bhfj2DKLVl03gg=</dsig:DigestValue>
+        <dsig:DigestValue>D8z2azvmUO9n4k9k/KmPqgqlewZD7j3eggBMxg9oDFE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

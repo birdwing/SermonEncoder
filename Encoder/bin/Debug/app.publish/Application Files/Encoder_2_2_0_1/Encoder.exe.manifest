@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Encoder.exe" version="2.2.0.1" publicKeyToken="dbe292e9d44a7771" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Encoder.exe" version="2.2.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="icon_z8l_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Encoder" version="1.0.0.0" publicKeyToken="DBE292E9D44A7771" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Encoder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="Encoder.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Encoder.exe" size="122848">
-      <assemblyIdentity name="Encoder" version="1.0.0.0" publicKeyToken="DBE292E9D44A7771" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Encoder.exe" size="121344">
+      <assemblyIdentity name="Encoder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pRbGlkPhVZq3aoaN60n6CagzUToh3bhfj2DKLVl03gg=</dsig:DigestValue>
+        <dsig:DigestValue>D8z2azvmUO9n4k9k/KmPqgqlewZD7j3eggBMxg9oDFE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -117,4 +117,4 @@
       <dsig:DigestValue>xUt0Hzvl8T5ZAu03N4BBKcyntTTm/iL18dQiC1ik2dg=</dsig:DigestValue>
     </hash>
   </file>
-<publisherIdentity name="CN=DESKTOP-K3TGJE7\webma" issuerKeyHash="63c1205c6e6de9121ab23bfcccfa1387bb99ebee" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>/veKmM5bw6jnGS5tdia4Syvp/dF8fqs9ZIowU2sjZHY=</DigestValue></Reference></SignedInfo><SignatureValue>YAmeSsjbdkzBJWj7YbP2aQkiMEUgW/0Rx/20qxokeH2U8p/rYne9Ap6xYlYlWoGE8HR4d1icyhFZnosyKPx2MsYTDWb8xaB1S/eq3cNf0ZfALLQ6OOj+K0ZQB0dvL9KkWt83TmZWOBoclRDBBdw1yNgG3Rav41uuRDkh0KCoH7k=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>q68yLeUSws3pp5fcnbDf7WkDwRFC8Evq5UXMsqVmjitX55eIdS1yG26nhHCetdXieGBWxfrXnG7ErcsIla9Wx24W0fDtJ/yCs9fEQXqw3O4h8c334iaVIyUIziS0wID66RO/X8Z2+tXSlLvsc6X8zbYTLGbbjLGxTPuzddrIJbU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7664236b53308a643dab7e7cd1fde92b4bb826766d2e19e7a8c35bce988af7fe" Description="" Url=""><as:assemblyIdentity name="Encoder.exe" version="2.2.0.1" publicKeyToken="dbe292e9d44a7771" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-K3TGJE7\webma</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>y3bE6xrDqSn0Iry/igT+q9TuQiC18QMo5oyCjMDWUNc=</DigestValue></Reference></SignedInfo><SignatureValue>X06RBwfY2A41asRIQYeTJxRt0CP7KJcSDTSk5OM88clVuULjp3K/WOfbd5RJcn0x7K6cp7sEsbye5TTb/gX2NaAdCBEwrgVmb/5KfpjU3/dPui01zwIWYzWmQr6QGir5cVoXopeGiUa5/WMwSFSrYypauLLMiHWqWrbtrwk2jrk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>q68yLeUSws3pp5fcnbDf7WkDwRFC8Evq5UXMsqVmjitX55eIdS1yG26nhHCetdXieGBWxfrXnG7ErcsIla9Wx24W0fDtJ/yCs9fEQXqw3O4h8c334iaVIyUIziS0wID66RO/X8Z2+tXSlLvsc6X8zbYTLGbbjLGxTPuzddrIJbU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQGXaakdnxn6JCqJ1AMPPOwDANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEsAMwBUAEcASgBFADcAXAB3AGUAYgBtAGEwHhcNMjIwMjE3MDMxMzU1WhcNMjMwMjE3MDkxMzU1WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEsAMwBUAEcASgBFADcAXAB3AGUAYgBtAGEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKuvMi3lEsLN6aeX3J2w3+1pA8ERQvBL6uVFzLKlZo4rV+eXiHUtchtup4RwnrXV4nhgVsX615xuxK3LCJWvVsduFtHw7Sf8grPXxEF6sNzuIfHN9+ImlSMlCM4ktMCA+ukTv1/GdvrV0pS77HOl/M22Eyxm24yxsUz7s3XayCW1AgMBAAEwDQYJKoZIhvcNAQELBQADgYEARup+4dU7emJNKxwL6YVujJ1X+YE21+Y/asih2pM73iH6vBl5GPgXf6JBik+jqCyEGX31UJtwwScJhsXNSTlEdNj/gekyaIBC1d8HbVNkqmEbZ19kVKgTHkYXYBy5CDE5qt9bNWD5rykqhNTG+CL2bsCcEdvfhzIp+TDdEkqoIWw=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+</asmv1:assembly>
