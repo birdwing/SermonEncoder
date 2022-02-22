@@ -19,6 +19,7 @@ namespace Encoder
         public string Scripture { get; set; }
         public DateTime Date { get; set; }
         public string File { get; set; }
+        public string StartOffset { get; set; }
         public string Output { get; set; }
         public string Status { get; set; }
 
@@ -39,19 +40,20 @@ namespace Encoder
 
             foreach (Control ctrl in this.Controls)
             {
-                if(!string.IsNullOrEmpty(SermonErrorProvider.GetError(ctrl)))
+                if (!string.IsNullOrEmpty(SermonErrorProvider.GetError(ctrl)))
                 {
                     HasError = true;
                     break;
                 }
             }
-            
+
             if (!HasError)
             {
                 this.Title = AddSermonTitleTxt.Text;
                 this.Speaker = AddSermonSpeakerTxt.Text;
                 this.Scripture = AddSermonScriptureTxt.Text;
                 this.Date = AddSermonDate.Value;
+                this.StartOffset = AddSermonStartOffsetTxt.Text;
                 this.File = AddSermonFileTxt.Text;
                 this.Output = AddSermonOutputTxt.Text;
                 this.Status = "Waiting";

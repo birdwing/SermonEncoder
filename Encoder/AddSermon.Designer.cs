@@ -43,10 +43,12 @@ namespace Encoder
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddSermon));
             this.AddSermonPanel = new System.Windows.Forms.Panel();
             this.AddSermonDateLbl = new System.Windows.Forms.Label();
+            this.AddSermonStartOffsetLbl = new System.Windows.Forms.Label();
             this.AddSermonScriptureLbl = new System.Windows.Forms.Label();
             this.AddSermonSpeakerLbl = new System.Windows.Forms.Label();
             this.AddSermonTitleLbl = new System.Windows.Forms.Label();
             this.AddSermonDate = new System.Windows.Forms.DateTimePicker();
+            this.AddSermonStartOffsetTxt = new System.Windows.Forms.NumericUpDown();
             this.AddSermonScriptureTxt = new System.Windows.Forms.TextBox();
             this.AddSermonSpeakerTxt = new System.Windows.Forms.TextBox();
             this.AddSermonTitleTxt = new System.Windows.Forms.TextBox();
@@ -68,16 +70,18 @@ namespace Encoder
             // AddSermonPanel
             // 
             this.AddSermonPanel.Controls.Add(this.AddSermonDateLbl);
+            this.AddSermonPanel.Controls.Add(this.AddSermonStartOffsetLbl);
             this.AddSermonPanel.Controls.Add(this.AddSermonScriptureLbl);
             this.AddSermonPanel.Controls.Add(this.AddSermonSpeakerLbl);
             this.AddSermonPanel.Controls.Add(this.AddSermonTitleLbl);
             this.AddSermonPanel.Controls.Add(this.AddSermonDate);
+            this.AddSermonPanel.Controls.Add(this.AddSermonStartOffsetTxt);
             this.AddSermonPanel.Controls.Add(this.AddSermonScriptureTxt);
             this.AddSermonPanel.Controls.Add(this.AddSermonSpeakerTxt);
             this.AddSermonPanel.Controls.Add(this.AddSermonTitleTxt);
             this.AddSermonPanel.Location = new System.Drawing.Point(12, 5);
             this.AddSermonPanel.Name = "AddSermonPanel";
-            this.AddSermonPanel.Size = new System.Drawing.Size(501, 117);
+            this.AddSermonPanel.Size = new System.Drawing.Size(501, 145);
             this.AddSermonPanel.TabIndex = 0;
             // 
             // AddSermonDateLbl
@@ -86,16 +90,24 @@ namespace Encoder
             this.AddSermonDateLbl.Location = new System.Drawing.Point(4, 93);
             this.AddSermonDateLbl.Name = "AddSermonDateLbl";
             this.AddSermonDateLbl.Size = new System.Drawing.Size(30, 13);
-            this.AddSermonDateLbl.TabIndex = 7;
+            this.AddSermonDateLbl.TabIndex = 8;
             this.AddSermonDateLbl.Text = "Date";
+            //
+            // AddSermonStartOffsetLbl
             // 
+            this.AddSermonStartOffsetLbl.AutoSize = true;
+            this.AddSermonStartOffsetLbl.Location = new System.Drawing.Point(4, 120);
+            this.AddSermonStartOffsetLbl.Name = "AddSermonStartOffsetLbl";
+            this.AddSermonStartOffsetLbl.Size = new System.Drawing.Size(30, 13);
+            this.AddSermonStartOffsetLbl.TabIndex = 9;
+            this.AddSermonStartOffsetLbl.Text = "Start Offset in Seconds";
             // AddSermonScriptureLbl
             // 
             this.AddSermonScriptureLbl.AutoSize = true;
             this.AddSermonScriptureLbl.Location = new System.Drawing.Point(4, 67);
             this.AddSermonScriptureLbl.Name = "AddSermonScriptureLbl";
             this.AddSermonScriptureLbl.Size = new System.Drawing.Size(49, 13);
-            this.AddSermonScriptureLbl.TabIndex = 6;
+            this.AddSermonScriptureLbl.TabIndex = 7;
             this.AddSermonScriptureLbl.Text = "Scripture";
             // 
             // AddSermonSpeakerLbl
@@ -104,7 +116,7 @@ namespace Encoder
             this.AddSermonSpeakerLbl.Location = new System.Drawing.Point(4, 41);
             this.AddSermonSpeakerLbl.Name = "AddSermonSpeakerLbl";
             this.AddSermonSpeakerLbl.Size = new System.Drawing.Size(47, 13);
-            this.AddSermonSpeakerLbl.TabIndex = 5;
+            this.AddSermonSpeakerLbl.TabIndex = 6;
             this.AddSermonSpeakerLbl.Text = "Speaker";
             // 
             // AddSermonTitleLbl
@@ -113,7 +125,7 @@ namespace Encoder
             this.AddSermonTitleLbl.Location = new System.Drawing.Point(4, 14);
             this.AddSermonTitleLbl.Name = "AddSermonTitleLbl";
             this.AddSermonTitleLbl.Size = new System.Drawing.Size(27, 13);
-            this.AddSermonTitleLbl.TabIndex = 4;
+            this.AddSermonTitleLbl.TabIndex = 5;
             this.AddSermonTitleLbl.Text = "Title";
             // 
             // AddSermonDate
@@ -125,6 +137,14 @@ namespace Encoder
             this.AddSermonDate.Size = new System.Drawing.Size(411, 20);
             this.AddSermonDate.TabIndex = 3;
             this.AddSermonDate.Validating += new System.ComponentModel.CancelEventHandler(this.SermonDate_Validated);
+            //
+            // AddSermonStartOffsetTxt
+            //
+            this.AddSermonStartOffsetTxt.Location = new System.Drawing.Point(125, 112);
+            this.AddSermonStartOffsetTxt.Name = "AddSermonStartOffsetTxt";
+            this.AddSermonStartOffsetTxt.Size = new System.Drawing.Size(350, 20);
+            this.AddSermonStartOffsetTxt.TabIndex = 4;
+            this.AddSermonStartOffsetTxt.Text = "0";
             // 
             // AddSermonScriptureTxt
             // 
@@ -152,10 +172,10 @@ namespace Encoder
             // 
             // AddSermonFileBtn
             // 
-            this.AddSermonFileBtn.Location = new System.Drawing.Point(12, 130);
+            this.AddSermonFileBtn.Location = new System.Drawing.Point(12, 153);
             this.AddSermonFileBtn.Name = "AddSermonFileBtn";
             this.AddSermonFileBtn.Size = new System.Drawing.Size(102, 23);
-            this.AddSermonFileBtn.TabIndex = 8;
+            this.AddSermonFileBtn.TabIndex = 10;
             this.AddSermonFileBtn.Text = "Select Video File";
             this.AddSermonFileBtn.UseVisualStyleBackColor = true;
             this.AddSermonFileBtn.Click += new System.EventHandler(this.AddSermonFileBtn_Click);
@@ -163,20 +183,20 @@ namespace Encoder
             // AddSermonFileTxt
             // 
             this.AddSermonFileTxt.Enabled = false;
-            this.AddSermonFileTxt.Location = new System.Drawing.Point(120, 132);
+            this.AddSermonFileTxt.Location = new System.Drawing.Point(120, 155);
             this.AddSermonFileTxt.Name = "AddSermonFileTxt";
             this.AddSermonFileTxt.Size = new System.Drawing.Size(366, 20);
-            this.AddSermonFileTxt.TabIndex = 9;
+            this.AddSermonFileTxt.TabIndex = 11;
             this.AddSermonFileTxt.Validating += new System.ComponentModel.CancelEventHandler(this.SermonFile_Validated);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.AddSermonCancelBtn);
             this.panel1.Controls.Add(this.AddSermonOkBtn);
-            this.panel1.Location = new System.Drawing.Point(324, 188);
+            this.panel1.Location = new System.Drawing.Point(324, 214);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(162, 29);
-            this.panel1.TabIndex = 10;
+            this.panel1.TabIndex = 12;
             // 
             // AddSermonCancelBtn
             // 
@@ -200,7 +220,7 @@ namespace Encoder
             // 
             // AddSermonOutputBtn
             // 
-            this.AddSermonOutputBtn.Location = new System.Drawing.Point(12, 160);
+            this.AddSermonOutputBtn.Location = new System.Drawing.Point(12, 186);
             this.AddSermonOutputBtn.Name = "AddSermonOutputBtn";
             this.AddSermonOutputBtn.Size = new System.Drawing.Size(102, 23);
             this.AddSermonOutputBtn.TabIndex = 11;
@@ -211,7 +231,7 @@ namespace Encoder
             // AddSermonOutputTxt
             // 
             this.AddSermonOutputTxt.Enabled = false;
-            this.AddSermonOutputTxt.Location = new System.Drawing.Point(120, 162);
+            this.AddSermonOutputTxt.Location = new System.Drawing.Point(120, 188);
             this.AddSermonOutputTxt.Name = "AddSermonOutputTxt";
             this.AddSermonOutputTxt.Size = new System.Drawing.Size(366, 20);
             this.AddSermonOutputTxt.TabIndex = 12;
@@ -234,7 +254,7 @@ namespace Encoder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 233);
+            this.ClientSize = new System.Drawing.Size(505, 256);
             this.Controls.Add(this.AddSermonOutputTxt);
             this.Controls.Add(this.AddSermonOutputBtn);
             this.Controls.Add(this.panel1);
@@ -258,7 +278,8 @@ namespace Encoder
             if (string.IsNullOrEmpty(this.AddSermonTitleTxt.Text))
             {
                 SermonErrorProvider.SetError(this.AddSermonTitleTxt, "Title is required.");
-            } else
+            }
+            else
             {
                 SermonErrorProvider.SetError(this.AddSermonTitleTxt, string.Empty);
             }
@@ -269,7 +290,8 @@ namespace Encoder
             if (string.IsNullOrEmpty(this.AddSermonScriptureTxt.Text))
             {
                 SermonErrorProvider.SetError(this.AddSermonScriptureTxt, "Scripture is required.");
-            } else
+            }
+            else
             {
                 //Add Question status icon Error, to prevent form from being saved while validating scripture
                 SermonErrorProvider.SetError(this.AddSermonScriptureTxt, string.Empty);
@@ -279,7 +301,8 @@ namespace Encoder
                 if (await VerifyScripture(this.AddSermonScriptureTxt.Text))
                 {
                     SermonStatusProvider.SetError(this.AddSermonScriptureTxt, string.Empty);
-                } else
+                }
+                else
                 {
                     SermonStatusProvider.SetError(this.AddSermonScriptureTxt, string.Empty);
                     SermonErrorProvider.SetError(this.AddSermonScriptureTxt, "Scripture is not Valid.");
@@ -353,13 +376,15 @@ namespace Encoder
             if (string.IsNullOrEmpty(this.AddSermonFileTxt.Text))
             {
                 SermonErrorProvider.SetError(this.AddSermonFileTxt, "Video File is required.");
-            } else
+            }
+            else
             {
                 string ext = this.AddSermonFileTxt.Text.Split('.').Last();
                 if (ext == "mp4" || ext == "mov" || ext == "m4v" || ext == "mpg" || ext == "mkv")
                 {
                     SermonErrorProvider.SetError(this.AddSermonFileTxt, string.Empty);
-                } else
+                }
+                else
                 {
                     SermonErrorProvider.SetError(this.AddSermonFileTxt, "File must be .mp4, .mov, .mpg, .mkv or .m4v format.");
                 }
@@ -371,7 +396,8 @@ namespace Encoder
             if (string.IsNullOrEmpty(this.AddSermonOutputTxt.Text))
             {
                 SermonErrorProvider.SetError(this.AddSermonOutputTxt, "Output Folder is required.");
-            } else
+            }
+            else
             {
                 SermonErrorProvider.SetError(this.AddSermonOutputTxt, string.Empty);
             }
@@ -384,7 +410,9 @@ namespace Encoder
         private System.Windows.Forms.TextBox AddSermonScriptureTxt;
         private System.Windows.Forms.TextBox AddSermonSpeakerTxt;
         private System.Windows.Forms.DateTimePicker AddSermonDate;
+        private System.Windows.Forms.NumericUpDown AddSermonStartOffsetTxt;
         private System.Windows.Forms.Label AddSermonDateLbl;
+        private System.Windows.Forms.Label AddSermonStartOffsetLbl;
         private System.Windows.Forms.Label AddSermonScriptureLbl;
         private System.Windows.Forms.Label AddSermonSpeakerLbl;
         private System.Windows.Forms.Label AddSermonTitleLbl;
