@@ -71,6 +71,7 @@ namespace Encoder
                     Sermon.SubItems.Add(form.Date.ToString());
                     Sermon.SubItems.Add(form.File);
                     Sermon.SubItems.Add(form.Output);
+                    Sermon.SubItems.Add(form.StartOffset);
                     Sermon.SubItems.Add(form.Status);
                     Sermon.Group = QueueLst.Groups["Waiting"];
                     QueueLst.Items.Add(Sermon);
@@ -236,7 +237,7 @@ namespace Encoder
                 Encoder.AddCommand(
                     new XCustomCommand()
                     {
-                        Command = $@"{ Encoder.FFmpegAudioCmd } -metadata title=""{Sermon.Text}"" -metadata artist=""{Sermon.SubItems[1].Text}"" -metadata album=""Gateway Worship Center"" -metadata genre=""Christian Sermon"""
+                        Command = $@"-ss {Sermon.SubItems[6].Text} { Encoder.FFmpegAudioCmd } -metadata title=""{Sermon.Text}"" -metadata artist=""{Sermon.SubItems[1].Text}"" -metadata album=""Gateway Worship Center"" -metadata genre=""Christian Sermon"""
                         //Command = $@"-acodec libmp3lame -ab 96k -ar 48000 -joint_stereo 1 -metadata title=""{Sermon.Text}"" -metadata artist=""{Sermon.SubItems[1].Text}"" -metadata album=""Gateway Worship Center"" -metadata genre=""Christian Sermon"""
                     }
                 );
@@ -244,10 +245,10 @@ namespace Encoder
                 Encoder.AddCommand(
                     new XCustomCommand()
                     {
-                        Command = $@"{ Encoder.FFmpegVideoCmd}"
+                        Command = $@"-ss {Sermon.SubItems[6].Text} { Encoder.FFmpegVideoCmd}"
                         //Command = $@"-vcodec libx264 -f mp4 -vb 1000k -r 29.97 -profile:v main -level:v 4.0 -preset slow -acodec aac -strict -2 -ab 96k -ar 48000 -vf scale=720:-2"
                     }
-                );
+                ); ;
                 Encoder.AddCommand(VideoFile);
                 Encoder.AddCommand(new XOverwrite());
 
@@ -269,7 +270,7 @@ namespace Encoder
                     Sermon.Group = QueueLst.Groups["Processing"];
                 }
 
-                Sermon.SubItems[6].Text = $"Processing - {e.ProgressPercentage.ToString()}%";
+                Sermon.SubItems[7].Text = $"Processing - {e.ProgressPercentage.ToString()}%";
             }));
         }
 
@@ -288,7 +289,7 @@ namespace Encoder
                     UploadSermon(Sermon);
                 } else
                 {
-                    Sermon.SubItems[6].Text = $"Processing - Error - {e.ConsoleOuptut}";
+                    Sermon.SubItems[7].Text = $"Processing - Error - {e.ConsoleOuptut}";
                     Sermon.BackColor = Color.Salmon;
                 }
 
@@ -325,7 +326,7 @@ namespace Encoder
                 return true;
             } catch(Exception ex)
             {
-                Sermon.SubItems[6].Text = $"Create XML - Error - {ex.Message}";
+                Sermon.SubItems[7].Text = $"Create XML - Error - {ex.Message}";
                 Sermon.BackColor = Color.Salmon;
                 return false;
             }
@@ -337,7 +338,7 @@ namespace Encoder
             DateTime SermonDate = DateTime.Parse(Sermon.SubItems[3].Text);
             string FolderName = SermonDate.ToString("MM-dd-yyyy");
 
-            Sermon.SubItems[6].Text = $"Uploading XML - 0%";
+            Sermon.SubItems[7].Text = $"Uploading XML - 0%";
 
             try
             {
@@ -372,7 +373,7 @@ namespace Encoder
                 UploadSermonXML(Sermon);
             } catch (Exception e)
             {
-                Sermon.SubItems[6].Text = $"Upload - Error Creating Directory - {e.ToString()}";
+                Sermon.SubItems[7].Text = $"Upload - Error Creating Directory - {e.ToString()}";
                 Sermon.BackColor = Color.Salmon;
             }
         }
@@ -387,13 +388,13 @@ namespace Encoder
             Invoke(new Action(() =>
             {
                 //Get List Items status without percentage
-                var status = Sermon.SubItems[6].Text;
+                var status = Sermon.SubItems[7].Text;
                 int index = status.LastIndexOf("-");
                 if (index > 0)
                 {
                     status = status.Substring(0, index);
                 }
-                Sermon.SubItems[6].Text = $"{status}- {e.ProgressPercentage.ToString()}%";
+                Sermon.SubItems[7].Text = $"{status}- {e.ProgressPercentage.ToString()}%";
             }));
         }
 
@@ -407,7 +408,7 @@ namespace Encoder
             string remoteDir = $@"{this.Dir}/{FolderName}/";
 
             //Upload XML file
-            Sermon.SubItems[6].Text = "Uploading XML - 0%";
+            Sermon.SubItems[7].Text = "Uploading XML - 0%";
 
             try
             {
@@ -448,7 +449,7 @@ namespace Encoder
                         {
                             Invoke(new Action(() =>
                             {
-                                Sermon.SubItems[6].Text = "Uploading XML - 100%";
+                                Sermon.SubItems[7].Text = "Uploading XML - 100%";
                             }));
 
                             e.Result = session;
@@ -479,7 +480,7 @@ namespace Encoder
             }
             catch (Exception e)
             {
-                Sermon.SubItems[6].Text = $"Upload XML - Error - {e.ToString()}";
+                Sermon.SubItems[7].Text = $"Upload XML - Error - {e.ToString()}";
                 Sermon.BackColor = Color.Salmon;
             }
         }
@@ -494,7 +495,7 @@ namespace Encoder
             string remoteDir = $@"{this.Dir}/{FolderName}/";
 
             //Upload Audio file
-            Sermon.SubItems[6].Text = "Uploading Audio - 0%";
+            Sermon.SubItems[7].Text = "Uploading Audio - 0%";
 
             try
             {
@@ -535,7 +536,7 @@ namespace Encoder
                         {
                             Invoke(new Action(() =>
                             {
-                                Sermon.SubItems[6].Text = "Uploading Audio - 100%";
+                                Sermon.SubItems[7].Text = "Uploading Audio - 100%";
                             }));
 
                             e.Result = session;
@@ -566,7 +567,7 @@ namespace Encoder
             }
             catch (Exception e)
             {
-                Sermon.SubItems[6].Text = $"Upload Audio - Error - {e.ToString()}";
+                Sermon.SubItems[7].Text = $"Upload Audio - Error - {e.ToString()}";
                 Sermon.BackColor = Color.Salmon;
             }
         }
@@ -581,7 +582,7 @@ namespace Encoder
             string remoteDir = $@"{this.Dir}/{FolderName}/";
 
             //Upload Video file
-            Sermon.SubItems[6].Text = "Uploading Video - 0%";
+            Sermon.SubItems[7].Text = "Uploading Video - 0%";
 
             try
             {
@@ -622,7 +623,7 @@ namespace Encoder
                         {
                             Invoke(new Action(() =>
                             {
-                                Sermon.SubItems[6].Text = "Uploading Video - 100%";
+                                Sermon.SubItems[7].Text = "Uploading Video - 100%";
                             }));
 
                             e.Result = session;
@@ -643,7 +644,7 @@ namespace Encoder
                         //Set Sermon Complete notification
                         Invoke(new Action(() =>
                         {
-                            Sermon.SubItems[6].Text = $"Uploaded Successfully - Completed";
+                            Sermon.SubItems[7].Text = $"Uploaded Successfully - Completed";
                             Sermon.Group = QueueLst.Groups["Completed"];
                             Sermon.BackColor = Color.LightGreen;
                         }));
@@ -652,7 +653,7 @@ namespace Encoder
                         CheckIfDone();
                     } else
                     {
-                        Sermon.SubItems[6].Text = $"Upload Video - Error - {e.Error.Message}";
+                        Sermon.SubItems[7].Text = $"Upload Video - Error - {e.Error.Message}";
                         Sermon.BackColor = Color.Salmon;
                     }
                 };
@@ -662,7 +663,7 @@ namespace Encoder
             }
             catch (Exception e)
             {
-                Sermon.SubItems[6].Text = $"Upload Video - Error - {e.ToString()}";
+                Sermon.SubItems[7].Text = $"Upload Video - Error - {e.ToString()}";
                 Sermon.BackColor = Color.Salmon;
             }
         }

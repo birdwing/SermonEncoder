@@ -48,6 +48,7 @@ namespace Encoder
             this.FTPSettingsBtn = new System.Windows.Forms.Button();
             this.FFmpegSettingsBtn = new System.Windows.Forms.Button();
             this.ShutdownChk = new System.Windows.Forms.CheckBox();
+            this.FileStartOffset = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // QueueLst
@@ -59,6 +60,7 @@ namespace Encoder
             this.SermonDate,
             this.SermonFile,
             this.OutputFolder,
+            this.FileStartOffset,
             this.SermonStatus});
             this.QueueLst.FullRowSelect = true;
             listViewGroup1.Header = "Waiting";
@@ -78,7 +80,7 @@ namespace Encoder
             this.QueueLst.Location = new System.Drawing.Point(17, 42);
             this.QueueLst.MultiSelect = false;
             this.QueueLst.Name = "QueueLst";
-            this.QueueLst.Size = new System.Drawing.Size(977, 364);
+            this.QueueLst.Size = new System.Drawing.Size(1082, 364);
             this.QueueLst.TabIndex = 0;
             this.QueueLst.UseCompatibleStateImageBehavior = false;
             this.QueueLst.View = System.Windows.Forms.View.Details;
@@ -150,7 +152,7 @@ namespace Encoder
             // 
             // ProcessBtn
             // 
-            this.ProcessBtn.Location = new System.Drawing.Point(858, 417);
+            this.ProcessBtn.Location = new System.Drawing.Point(963, 417);
             this.ProcessBtn.Name = "ProcessBtn";
             this.ProcessBtn.Size = new System.Drawing.Size(136, 23);
             this.ProcessBtn.TabIndex = 4;
@@ -160,7 +162,7 @@ namespace Encoder
             // 
             // FTPSettingsBtn
             // 
-            this.FTPSettingsBtn.Location = new System.Drawing.Point(792, 13);
+            this.FTPSettingsBtn.Location = new System.Drawing.Point(897, 13);
             this.FTPSettingsBtn.Name = "FTPSettingsBtn";
             this.FTPSettingsBtn.Size = new System.Drawing.Size(96, 23);
             this.FTPSettingsBtn.TabIndex = 5;
@@ -170,7 +172,7 @@ namespace Encoder
             // 
             // FFmpegSettingsBtn
             // 
-            this.FFmpegSettingsBtn.Location = new System.Drawing.Point(894, 13);
+            this.FFmpegSettingsBtn.Location = new System.Drawing.Point(999, 13);
             this.FFmpegSettingsBtn.Name = "FFmpegSettingsBtn";
             this.FFmpegSettingsBtn.Size = new System.Drawing.Size(100, 23);
             this.FFmpegSettingsBtn.TabIndex = 6;
@@ -182,7 +184,7 @@ namespace Encoder
             // 
             this.ShutdownChk.AutoSize = true;
             this.ShutdownChk.Checked = global::Encoder.Properties.Settings.Default.Shutdown;
-            this.ShutdownChk.Location = new System.Drawing.Point(640, 421);
+            this.ShutdownChk.Location = new System.Drawing.Point(745, 421);
             this.ShutdownChk.Name = "ShutdownChk";
             this.ShutdownChk.Size = new System.Drawing.Size(212, 17);
             this.ShutdownChk.TabIndex = 7;
@@ -190,11 +192,16 @@ namespace Encoder
             this.ShutdownChk.UseVisualStyleBackColor = true;
             this.ShutdownChk.CheckedChanged += new System.EventHandler(this.ShutdownChk_CheckedChanged);
             // 
+            // FileStartOffset
+            // 
+            this.FileStartOffset.Text = "Start Offset";
+            this.FileStartOffset.Width = 96;
+            // 
             // Sermons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 452);
+            this.ClientSize = new System.Drawing.Size(1114, 452);
             this.Controls.Add(this.ShutdownChk);
             this.Controls.Add(this.FFmpegSettingsBtn);
             this.Controls.Add(this.FTPSettingsBtn);
@@ -229,6 +236,7 @@ namespace Encoder
         private System.Windows.Forms.Button FTPSettingsBtn;
         private System.Windows.Forms.Button FFmpegSettingsBtn;
         private System.Windows.Forms.CheckBox ShutdownChk;
+        private System.Windows.Forms.ColumnHeader FileStartOffset;
     }
 }
 

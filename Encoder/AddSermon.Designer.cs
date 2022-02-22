@@ -145,6 +145,8 @@ namespace Encoder
             this.AddSermonStartOffsetTxt.Size = new System.Drawing.Size(350, 20);
             this.AddSermonStartOffsetTxt.TabIndex = 4;
             this.AddSermonStartOffsetTxt.Text = "0";
+            this.AddSermonStartOffsetTxt.Minimum = 0;
+            this.AddSermonStartOffsetTxt.Maximum = 11000;
             // 
             // AddSermonScriptureTxt
             // 
