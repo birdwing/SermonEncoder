@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Encoder.exe" size="121344">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Encoder.exe" size="122368">
       <assemblyIdentity name="Encoder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>D8z2azvmUO9n4k9k/KmPqgqlewZD7j3eggBMxg9oDFE=</dsig:DigestValue>
+        <dsig:DigestValue>luLsoSw8U7gr5AlW5Tw1PwdQBjdvGz7Py+APM4nim08=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
